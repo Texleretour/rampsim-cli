@@ -4,12 +4,13 @@ from spells.classes.druid.restoration import *
 from spells.classes.priest.discipline import *
 
 def main():
-    # TODO: Add support for mana costs
+    # TODO Add support for mana costs
     
     # ******************************
-    
+    # TODO Determine Haste from a config file
     HASTE_RATING = 1000
     
+    # TODO Determine the sequence from a txt file
     SEQUENCE = [
         power_word_radiance,
         power_word_radiance,
@@ -23,11 +24,11 @@ def main():
     # ******************************
     
     sequence = Sequence(SEQUENCE)
-    haste_percent = calculate_haste_percent(HASTE_RATING) 
+    haste_percent = calculate_haste_percent(HASTE_RATING)
     
     print("############################")
     print("Ramp simulator\n")
-    print(f"Haste : {HASTE_RATING} / {haste_percent} %")
+    print(f"Haste : {HASTE_RATING} = {haste_percent} %")
     print("Result :", sequence.sim(haste_percent), "seconds")
     
 main()

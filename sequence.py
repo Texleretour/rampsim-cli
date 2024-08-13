@@ -10,6 +10,6 @@ class Sequence():
         for spell in self.sequence:
             time += spell.sim(haste_percent)
     
-        return time
+        return round(time, 1)
                 
         
